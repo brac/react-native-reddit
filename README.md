@@ -1,5 +1,7 @@
 #Notes
 - Read up on reddit JSON response
+[x] Build dummy data
+[x] Get basic proof of concept running
 - Build Layout
   - Post
     - Thumbnail
