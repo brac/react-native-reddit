@@ -13,6 +13,8 @@
         - Score
         - Comments
 - Build Fetch Logic
+[ ] Determine how to production build
+[ ] Determine how to export for iOS
 
 
 
