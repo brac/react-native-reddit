@@ -11,14 +11,36 @@ class Posts extends Component{
 
   static renderPost(post){
     return(
-      <Post/>
+      <Post
+        key={post.key}
+        uri={post.uri}
+        url={post.url}
+        epochTime={post.epochTime}
+        title={post.title}
+        author={post.author}
+        score={post.score}
+        num_comments={post.num_comments}
+      />
     )
   }
 
   render(){
     const { errpr, posts } = this.props;
       return (
-        <Post/>
+          posts.map((post) => {
+            return (
+              Posts.renderPost({
+                key: post.key,
+                uri: post.uri,
+                url: post.url,
+                epochTime: post.epochTime,
+                title: post.title,
+                author: post.author,
+                score: post.score,
+                num_comments: post.num_comments
+              })
+            )
+        })
       )
     }
 }

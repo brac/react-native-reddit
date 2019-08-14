@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native'
+import {View, Text, FlatList, Image} from 'react-native'
 
 class Post extends Component{
+  constructor(props) {
+    super(props);
+  }
   render(){
+    //TODO: Get that image syntax figured ou
+    console.log (this.props.uri)
     return(
-      <Text>Hello</Text>
+      <View>
+        <Image source={{uri: this.props.uri}}/>
+        {/*<FlatList*/}
+        {/*data={[this.props]}*/}
+        {/*renderItem={({item}) =>*/}
+          {/*<View>*/}
+            {/*<Text>{item.author}</Text>*/}
+            {/**/}
+          {/*</View>*/}
+        {/*}*/}
+        {/*/>*/}
+      </View>
     )
   }
 }
