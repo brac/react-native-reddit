@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Posts from './components/posts'
+import {Image, View} from "react-native";
 
 const dummyData = [
   {
     _id: 1,
+    key: '1',
     uri: "https://b.thumbs.redditmedia.com/15COLIkopHlXEOiQ-Z1_LJi88gkYgCeBFHq8tLeNlOM.jpg",
     url: "https://i.redd.it/0kj97r5mjuf31.jpg",
     epochTime: 1565559488.0,
@@ -14,6 +16,7 @@ const dummyData = [
   },
   {
     _id: 2,
+    key: '2',
     uri: "https://b.thumbs.redditmedia.com/15COLIkopHlXEOiQ-Z1_LJi88gkYgCeBFHq8tLeNlOM.jpg",
     url: "https://i.redd.it/0kj97r5mjuf31.jpg",
     epochTime: 1565559488.0,
@@ -24,6 +27,7 @@ const dummyData = [
   },
   {
     _id: 3,
+    key: '3',
     uri: "https://b.thumbs.redditmedia.com/15COLIkopHlXEOiQ-Z1_LJi88gkYgCeBFHq8tLeNlOM.jpg",
     url: "https://i.redd.it/0kj97r5mjuf31.jpg",
     epochTime: 1565559488.0,
@@ -34,6 +38,7 @@ const dummyData = [
   },
   {
     _id: 4,
+    key: '4',
     uri: "https://b.thumbs.redditmedia.com/15COLIkopHlXEOiQ-Z1_LJi88gkYgCeBFHq8tLeNlOM.jpg",
     url: "https://i.redd.it/0kj97r5mjuf31.jpg",
     epochTime: 1565559488.0,
@@ -44,6 +49,7 @@ const dummyData = [
   },
   {
     _id: 5,
+    key: '5',
     uri: "https://b.thumbs.redditmedia.com/15COLIkopHlXEOiQ-Z1_LJi88gkYgCeBFHq8tLeNlOM.jpg",
     url: "https://i.redd.it/0kj97r5mjuf31.jpg",
     epochTime: 1565559488.0,
@@ -54,6 +60,7 @@ const dummyData = [
   },
   {
     _id: 6,
+    key: '6',
     uri: "https://b.thumbs.redditmedia.com/15COLIkopHlXEOiQ-Z1_LJi88gkYgCeBFHq8tLeNlOM.jpg",
     url: "https://i.redd.it/0kj97r5mjuf31.jpg",
     epochTime: 1565559488.0,
@@ -64,6 +71,7 @@ const dummyData = [
   },
   {
     _id: 7,
+    key: '7',
     uri: "https://b.thumbs.redditmedia.com/15COLIkopHlXEOiQ-Z1_LJi88gkYgCeBFHq8tLeNlOM.jpg",
     url: "https://i.redd.it/0kj97r5mjuf31.jpg",
     epochTime: 1565559488.0,
@@ -83,11 +91,21 @@ class App extends Component {
 
   render() {
     return(
-      <Posts
-        posts={this.state.data}
-      />
+      <Posts posts={this.state.data} />
     )
   }
 }
 
 export default App;
+
+
+
+
+// render(){
+//   let pic = {
+//     uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+//   };
+//   return (
+//     <Image source={pic} style={{width: 193, height: 110}}/>
+//   );
+// }
