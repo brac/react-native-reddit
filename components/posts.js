@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {FlatList, Image, Text, View, WebView} from 'react-native';
+import {FlatList, Image, Text, View} from 'react-native';
 import Post from './post'
 
 
@@ -9,9 +9,10 @@ class Posts extends Component{
   }
 
   //TODO: Tap to navigate to link
+  //Need an onpress and to use the react native navigatin package
   //TODO: Convert Epoch time to actual time
   render(){
-    const { errpr, posts } = this.props;
+    const { error, posts } = this.props;
       return (
         <FlatList
           style={{padding: 30 }}

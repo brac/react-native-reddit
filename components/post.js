@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {View, Text, Image, TouchableHighlight } from 'react-native'
+import {View, Text, Image, TouchableHighlight, WebView } from 'react-native'
+import styles from './styles'
 
 class Post extends Component{
   constructor(props) {
@@ -12,15 +13,16 @@ class Post extends Component{
 
   render(){
     //TODO: Style the elements
+    //TODO: Link to the actual post with webView
     return(
       <View>
         <TouchableHighlight onPress={this._onPress}>
           <Image source={this.props} style={{width: 140, height:140}}/>
         </TouchableHighlight>
         <Text>{this.props.date}</Text>
-        <Text>{this.props.title}</Text>
+        <Text style={styles.bigBlue}>{this.props.title}</Text>
         <Text>u/{this.props.author}</Text>
-        <Text>{this.props.score}</Text>
+        <Text style={styles.red}>{this.props.score}</Text>
         <Text>Number of Comments:{this.props.comments}</Text>
       </View>
     )
