@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  bigBlue: {
+  title: {
     color: 'blue',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 15,
   },
   red: {
     color: 'red',

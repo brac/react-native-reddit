@@ -9,26 +9,28 @@ class Posts extends Component{
   }
 
   //TODO: Tap to navigate to link
-  //Need an onpress and to use the react native navigatin package
+    //Need an onpress and to use the react native navigatin package
   //TODO: Convert Epoch time to actual time
+  _keyExtractor = (item) => item.data.id;
+
   render(){
     const { posts } = this.props;
 
     return (
         <FlatList
-          style={{padding: 30 }}
+          style={{padding: 25 }}
           data={posts}
+          keyExtractor={this._keyExtractor}
           renderItem={({item}) =>
-            <View>
-              <Post
-                uri={item.data.thumbnail}
-                date={item.data.created}
-                title={item.data.title}
-                author={item.data.author}
-                score={item.data.score}
-                comments={item.data.num_comments}
-              />
-            </View>
+            <Post
+              uri={item.data.thumbnail}
+              date={item.data.created}
+              title={item.data.title}
+              author={item.data.author}
+              score={item.data.score}
+              comments={item.data.num_comments}
+
+            />
           }
         />
       )

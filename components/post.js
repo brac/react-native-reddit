@@ -12,19 +12,42 @@ class Post extends Component{
   }
 
   render(){
-    //TODO: Style the elements
+    //TODO: Style the elements a little
     //TODO: Link to the actual post with webView
-
     return(
-      <View>
-        <TouchableHighlight onPress={this._onPress}>
-          <Image source={this.props} style={{width: 140, height:140}}/>
-        </TouchableHighlight>
-        <Text>{this.props.date}</Text>
-        <Text style={styles.bigBlue}>{this.props.title}</Text>
-        <Text>u/{this.props.author}</Text>
-        <Text style={styles.red}>{this.props.score}</Text>
-        <Text>Number of Comments:{this.props.comments}</Text>
+      <View style={{
+        flex: 1,
+        paddingBottom: 50
+      }}>
+        <View style={{
+          flex: 1,
+          flexDirection: 'row',
+        }}>
+          <View style={{
+            flex: 1,
+            flexDirection: 'column',
+          }}>
+            <TouchableHighlight onPress={this._onPress}>
+              <Image source={this.props} style={{width: 140, height:140}}/>
+            </TouchableHighlight>
+          </View>
+
+          <View style={{
+            flex: 1.5,
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+          }}>
+            <Text>{this.props.date}</Text>
+            <Text style={styles.title}>{this.props.title}</Text>
+            <View style={{
+              flexDirection: 'row',
+            }}>
+              <Text>u/{this.props.author}</Text>
+              <Text style={styles.red}>{this.props.score}</Text>
+            </View>
+            <Text># Comments:{this.props.comments}</Text>
+          </View>
+        </View>
       </View>
     )
   }
