@@ -12,20 +12,21 @@ class Posts extends Component{
   //Need an onpress and to use the react native navigatin package
   //TODO: Convert Epoch time to actual time
   render(){
-    const { error, posts } = this.props;
-      return (
+    const { posts } = this.props;
+
+    return (
         <FlatList
           style={{padding: 30 }}
           data={posts}
           renderItem={({item}) =>
             <View>
               <Post
-                uri={item.uri}
-                date={item.epochTime}
-                title={item.title}
-                author={item.author}
-                score={item.score}
-                comments={item.num_comments}
+                uri={item.data.thumbnail}
+                date={item.data.created}
+                title={item.data.title}
+                author={item.data.author}
+                score={item.data.score}
+                comments={item.data.num_comments}
               />
             </View>
           }

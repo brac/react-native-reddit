@@ -88,12 +88,35 @@ const dummyData = [
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = { data: dummyData }
+    this.state = {
+      posts: [],
+      isLoading: true
+    }
+  }
+
+  getPosts(){
+    return  fetch('https://api.reddit.com/r/pics/hot.json')
+      .then(res => res.json())
+      .then(resJson => {
+        this.setState({
+          posts: resJson.data.children,
+          isLoading: false,
+        }, function(){
+          
+        })
+        .catch(err => {
+          console.error(err)
+        })
+      })
+  }
+
+  componentDidMount() {
+    this.getPosts()
   }
 
   render() {
     return(
-      <Posts posts={this.state.data} />
+      <Posts posts={this.state.posts} />
     )
   }
 }

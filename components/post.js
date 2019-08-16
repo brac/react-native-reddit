@@ -14,6 +14,7 @@ class Post extends Component{
   render(){
     //TODO: Style the elements
     //TODO: Link to the actual post with webView
+
     return(
       <View>
         <TouchableHighlight onPress={this._onPress}>
