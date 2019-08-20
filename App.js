@@ -1,14 +1,37 @@
 import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import { createAppContainer, createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
 import Posts from './components/posts'
 
-//TODO: Write Loading
+class HomeScreen extends React.Component {
+  render() {
+    return (
+      <View >
+        <ViewScreen
+          navigation={this.props.navigation}
+        />
+      </View>
+    );
+  }
+}
 
-class App extends Component {
+class PostScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Post Screen</Text>
+      </View>
+    );
+  }
+}
+
+
+class ViewScreen extends Component {
   constructor(props){
     super(props);
     this.state = {
       posts: [],
-      isLoading: true
+
     }
   }
 
@@ -32,9 +55,33 @@ class App extends Component {
 
   render() {
     return(
-      <Posts posts={this.state.posts} />
+      <View>
+        <Posts posts={this.state.posts} navigation={this.props.navigation}/>
+      </View>
+
     )
   }
 }
 
-export default App;
+
+const RootStack = createStackNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+    },
+    Post: {
+      screen: PostScreen,
+    },
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+const AppContainer = createAppContainer(RootStack);
+
+export default class App extends React.Component {
+  render() {
+    return <AppContainer />;
+  }
+}

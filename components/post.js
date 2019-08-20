@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, Text, Image, TouchableHighlight, WebView } from 'react-native'
+import {View, Text, Image, TouchableHighlight, WebView, Button} from 'react-native'
 import styles from './styles'
 
 class Post extends Component{
@@ -7,12 +7,7 @@ class Post extends Component{
     super(props);
   }
 
-  _onPress(){
-    alert('Hey Dawg')
-  }
-
   render(){
-    //TODO: Style the elements a little
     //TODO: Link to the actual post with webView
     return(
       <View style={{
@@ -27,7 +22,9 @@ class Post extends Component{
             flex: 1,
             flexDirection: 'column',
           }}>
-            <TouchableHighlight onPress={this._onPress}>
+            <TouchableHighlight
+              onPress={() => this.props.navigation.push('Post')}
+            >
               <Image source={this.props} style={{width: 140, height:140}}/>
             </TouchableHighlight>
           </View>

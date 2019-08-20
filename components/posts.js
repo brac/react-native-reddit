@@ -14,7 +14,7 @@ class Posts extends Component{
   _keyExtractor = (item) => item.data.id;
 
   render(){
-    const { posts } = this.props;
+    const { posts, navigation } = this.props;
 
     return (
         <FlatList
@@ -29,7 +29,7 @@ class Posts extends Component{
               author={item.data.author}
               score={item.data.score}
               comments={item.data.num_comments}
-
+              navigation={navigation}
             />
           }
         />
