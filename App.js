@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, WebView } from 'react-native';
 import { createAppContainer, createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
 import Posts from './components/posts'
 
@@ -19,7 +19,10 @@ class PostScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Post Screen</Text>
+        <WebView
+          source={{uri: 'https://github.com/facebook/react-native'}}
+          style={{marginTop: 20}}
+        />
       </View>
     );
   }
