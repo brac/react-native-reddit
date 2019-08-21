@@ -11,12 +11,12 @@ After cloning the repo, run this in your command line
 npm install
 expo start
 ```
-You should now have an expo server running on your computer, and a web browser should have opened. 
-Click `Publish or republish project...`, above the QR code in the lower left corner of the window.
-Open your expo app on your iOS device. 
-click on the `Projects` icon in the lower left of the expo app on your iOS device.
-Select the application running in `Recently in Development` section. It should be the only one with an expo icon
-Enjoy a simple reddit r/pics browsing application.
+* You should now have an expo server running on your computer, and a web browser should have opened. 
+* Click `Publish or republish project...`, above the QR code in the lower left corner of the window.
+* Open your expo app on your iOS device. 
+* click on the `Projects` icon in the lower left of the expo app on your iOS device.
+* Select the application running in `Recently in Development` section. It should be the only one with an expo icon
+* Enjoy a simple reddit r/pics browsing application.
 
 ### Prerequisites
 Node.js
