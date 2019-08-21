@@ -1,24 +1,3 @@
-#Notes
-- Read up on reddit JSON response
-[x] Build dummy data
-[x] Get basic proof of concept running
-- Build Layout
-  - Post
-    - Thumbnail
-    - Content
-      - Date
-      - Details
-        - Title
-        - Author
-        - Score
-        - Comments
-- Build Fetch Logic
-[ ] Determine how to production build
-[ ] Determine how to export for iOS
-[ ] Fix missing key in list items warning
-
-
-
 # Native React Reddit
 
 A Native React Exercise using the Reddit API
@@ -38,6 +17,9 @@ Be sure to have a working version of Node.js
 ## Deployment
 
 Figure out Production Builds
+
+## Concessions
+I was unable to export this project to iOS. 
 
 ## Built With
 

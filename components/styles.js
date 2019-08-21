@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -10,6 +9,15 @@ const styles = StyleSheet.create({
   red: {
     color: 'red',
   },
+  postDetails: {
+    flex: 1.5,
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+  },
+  postContainer: {
+    flex: 1,
+    paddingBottom: 50
+  }
 });
 
 export default styles;

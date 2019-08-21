@@ -1,47 +1,30 @@
 import React, { Component } from 'react';
-import { View, Text, WebView } from 'react-native';
-import { createAppContainer, createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
+import { View, WebView } from 'react-native';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 import Posts from './components/posts'
-
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View >
-        <ViewScreen
-          navigation={this.props.navigation}
-        />
-      </View>
-    );
-  }
-}
 
 class PostScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <WebView
-          source={{uri: 'https://github.com/facebook/react-native'}}
-          style={{marginTop: 20}}
-        />
-      </View>
+      <WebView
+        source={{uri: this.props.navigation.getParam('uri', 'https://www.reddit.com/r/pics/')}}
+      />
     );
   }
 }
-
 
 class ViewScreen extends Component {
   constructor(props){
     super(props);
     this.state = {
       posts: [],
-
     }
   }
 
   async getPosts(){
     try{
-      let response = await fetch('https://api.reddit.com/r/pics/hot.json',)
-      let responseJson = await response.json()
+      let response = await fetch('https://api.reddit.com/r/pics/hot.json');
+      let responseJson = await response.json();
 
       this.setState({
         posts: responseJson.data.children,
@@ -58,19 +41,15 @@ class ViewScreen extends Component {
 
   render() {
     return(
-      <View>
-        <Posts posts={this.state.posts} navigation={this.props.navigation}/>
-      </View>
-
+      <Posts posts={this.state.posts} navigation={this.props.navigation}/>
     )
   }
 }
 
-
 const RootStack = createStackNavigator(
   {
     Home: {
-      screen: HomeScreen,
+      screen: ViewScreen,
     },
     Post: {
       screen: PostScreen,
