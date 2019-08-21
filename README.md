@@ -6,7 +6,7 @@ This application is a prototype and may have bugs or lacking functionality. You 
 Be sure to install the expo app on your iOS device from the App Store.  
 
 ### For Development
-After cloning the repo, run this in your command line
+Run this in your command line while in the directory you cloned or unziped the project to.
 ```bash
 npm install
 expo start
