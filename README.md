@@ -20,7 +20,7 @@ expo start
 
 ### Prerequisites
 Node.js
-Expo client on your iphone
+Expo client on your iOS device.
 
 ### Concessions
 I was unable to export this project to iOS, as I do not have access to a suitable development mac at this time. This application does run nicely through the expo client. 
