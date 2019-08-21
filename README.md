@@ -5,7 +5,7 @@ A Native React Exercise using the Reddit API
 This application is a prototype and may have bugs or lacking functionality. You will need a computer to run the development server. Both your development server and your device must be on the same wifi.
 Be sure to install the expo app on your iOS device from the App Store.  
 
-###For Development
+### For Development
 After cloning the repo, run this in your command line
 ```bash
 npm install
@@ -22,7 +22,7 @@ Enjoy a simple reddit r/pics browsing application.
 Node.js
 Expo client on your iphone
 
-## Concessions
+### Concessions
 I was unable to export this project to iOS, as I do not have access to a suitable development mac at this time. This application does run nicely through the expo client. 
 
 ## Built With
@@ -31,7 +31,6 @@ I was unable to export this project to iOS, as I do not have access to a suitabl
 * [Native React App](https://facebook.github.io/react-native/) - React Framework
 * [Nodejs](https://nodejs.org/en/) - The Javascript engine
 
-
 ## Authors
 
 * **Ben Bracamonte**  - [brac](https://github.com/brac)
@@ -39,5 +38,3 @@ I was unable to export this project to iOS, as I do not have access to a suitabl
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-\
